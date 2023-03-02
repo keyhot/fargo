@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+{% load bootstrap5 %}
+{% load static %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block page %}
+    <form method="POST">
+        {% csrf_token %}
+        {% bootstrap_form form layout='inline'%}
+        {% buttons %}
+            <button id="submit">
+               <img class="submit" src="{% static 'images/Group 10.png' %}">
+            </button>
+        {% endbuttons %}
+    </form>
+{% endblock %}

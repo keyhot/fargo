@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap5 %}
+{% bootstrap_javascript %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fargo Service</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="shortcut icon" href="#">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <div id="outer">
+        <div class="circle left" style="top: 143px; left: 10%;"></div>
+        <div class="circle right" style="right: 5%; top: 428px; background: #F99417;"></div>
+        <div class="circle left" style="left: 5%; top: 1143px;"></div>
+        <div class="circle right" style="right: 5%; top: 2051px; background: #F91717;"></div>
+        <div class="circle left" style="left: 5%; top: 2651px;"></div>
+        <div id="container">
+            <header>
+                <ul id="nav">
+                    <li><img src="{% static 'fargoLogo2.png' %}" id="logo"></li>
+                    <li class="nav-link"><a class="plain" href="#uslugi"><span>Услуги</span><img style="width: 73.93px; left: -10px;" src="{% static 'line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#rabota"><span>Работа в ЕС</span><img style="width: 101.55px; left: -5px;" src="{% static 'line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#onas"><span>О нас</span><img style="width: 61.46px; left: -8px;" src="{% static 'line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#contact"><span>Контакты</span><img style="width: 76.59px; left: -1px;" src="{% static 'line-06.svg' %}" class="underline"></a></li>
+                    <li class="num-link"><a class="plain" href="tel:+48881456477"><span class="num">+48 881 456 477</span><img style="width: 186px; left: -24px; top: -38px" src="{% static 'circle-17.svg' %}" class="underline"></a></li>
+                    <li class="num-link">
+                        <div>
+                            <a class="plain" href="https://www.instagram.com/fargocompany/"><img style="width: 30px; left: -8px;" src="{% static 'Group 2.png' %}" class="socials"></a>
+                            <a class="plain" href="https://www.facebook.com/profile.php?id=100090271071737"><img style="width: 30px; left: -8px;" src="{% static 'bxl-facebook.png' %}" class="socials"></a>
+                            <a class="plain" href="https://t.me/FargoConsultBot"><img style="width: 30px; left: -8px;" src="{% static 'bxl-telegram.png' %}" class="socials"></a>
+                        </div>
+                        <img style="width: 140px; left: -7px; top: 40px;" src="{% static 'line-06.svg' %}" class="underline">
+                    </li>
+                </ul>
+            </header>
+            <main>
+                {% block page %}
+
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-menu">
+                <h4>Навигация</h4>
+                <ul>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Работа в ЕС</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Юридическая информация</h4>
+                <p>NIP 6793188526</p>
+                <p>REGON:384159160</p>
+                <p>Siedziba: Gęsia 8 / 205, 31-535 Kraków</p>
+                <p>+48 578 579 070</p>
+                <p>+48 881 456 477</p>
+                <p>info@fargoservice.pl</p>
+
+            </div>
+            <div class="footer-social">
+                <h4>Социальные сети</h4>
+                <ul>
+                    <li><a class="plain" href="https://www.instagram.com/fargocompany/"><img style="width: 30px; left: -8px;" src="{% static 'Group 2.png' %}" class="socials"><span>Instagram</span></a></li>
+                    <li><a class="plain" href="https://www.facebook.com/profile.php?id=100090271071737"><img style="width: 30px; left: -8px;" src="{% static 'bxl-facebook.png' %}" class="socials"><span>Facebook</span></a></li>
+                    <li><a class="plain" href="https://t.me/FargoConsultBot"><img style="width: 30px; left: -8px;" src="{% static 'bxl-telegram.png' %}" class="socials"><span>Telegram</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Fargo Service sp. z. o. o. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="{% static 'script.js' %}"></script>
+    <script>AOS.init();</script>
+</body>
+</html>
