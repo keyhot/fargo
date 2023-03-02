@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-4g-sa3vs-(wpncmmg7zor^_idb8e4!aj*2hwy&5gqgp*k_&=^l'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'fargo.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('PSQL_DB_NAME'),
+        'USER': os.environ.get('PSQL_USER'),
+        'PASSWORD': os.environ.get('PSQL_PASSWORD'),
+        'HOST': os.environ.get('PSQL_DB_HOST'),
+        'PORT': '5432',
     }
 }
 
