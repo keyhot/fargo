@@ -88,6 +88,11 @@ DATABASES = {
         'HOST': os.environ.get('PSQL_DB_HOST'),
         'PORT': '5432',
     }
+#
+# 'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': 'db.sqlite3',
+#     }
 }
 
 

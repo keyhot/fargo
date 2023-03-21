@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap');
 
+/** {
+    border: 1px solid red;
+}
+*/
 html {
     background: #FFFFFF;
     width: 100%;
@@ -80,7 +84,7 @@ header {
 .underline {
     position: absolute;
     transform: rotate(-179.75deg);
-    width: 74px;
+    width: 78px;
     fill: #5D3891;
     bottom: -5px;
 }
@@ -116,6 +120,7 @@ header li {
 
 .socials {
     margin: 0 5px 0 5px;
+    width: 30px; left: -8px;
 }
 
 header li span{
@@ -175,8 +180,10 @@ section {
 
 .video-circle {
     border-radius: 50%;
+    position: relative;
     object-fit: cover;
-    position: absolute;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .description {
@@ -186,24 +193,35 @@ section {
     margin: 0 0 0 -10px;
     padding: 10px;
     height: 185px;
+}
+
+.sub_description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float:left; 
+    clear: left;
+}
+
+.desc_container {
+    width: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .description p {
-    margin-top: 40px;
+    margin-top: 18px;
     margin-right: 50px;
-    width: 835px;
+    width: 70%;
     font-size: 19px;
 }
 
 .description h3 {
-    margin-top: -120px;
-    margin-left: -270px;
-
-
-    width: 835px;
+    float:left; 
+    margin: 5px 0 0 40px;
+    width: 60%;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -211,7 +229,14 @@ section {
     line-height: 29px;
 
     color: #5D3891;
-    position: absolute;
+}
+
+.sub_description a{
+    width: 20%;
+}
+
+.sub_description a .button {
+    width: 100%;
 }
 
 @keyframes float {
@@ -306,6 +331,11 @@ h2 {
     height: 32px;
     border-radius: 28px;
     margin-left: 38px;
+    text-align: center;
+    background: #5D3891;
+    border-radius: 15px;
+    color: #F5F5F5;
+    width: 70%;
 }
 
 .box {  
@@ -388,7 +418,7 @@ h2 {
 }
 
 .subconsult p {
-    width: 645px;
+    width: 100%;
     height: 84px;
 
     font-family: 'Roboto';
@@ -401,7 +431,7 @@ h2 {
 }
 
 .subconsult span {
-    width: 645px;
+    width: 100%;
     font-family: 'Jost';
     font-style: normal;
     font-weight: 700;
@@ -413,7 +443,7 @@ h2 {
 }
 
 .subconsult {
-    width: 675px;
+    width: 50%;
     margin-left: 50px;
     margin-top: 20px;
     display: inline-block;
@@ -426,7 +456,7 @@ h2 {
 .consult form {
     display: inline-block;
     float: right;
-    width: 425px;
+    width: 40%;
     margin-right: 20px;
 }
 
@@ -571,6 +601,10 @@ h2 {
     color: #F5F5F5;
 }
 
+#onas h3 {
+    text-align: center;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -618,6 +652,7 @@ footer {
 
 .mySlides span {
     margin: 5px 15px 5px;
+    text-align: center;
 }
 
 /* Fading animation */
@@ -751,6 +786,11 @@ footer {
     counter-reset: num var(--num);
 }
 
+#onas p {
+    text-align: center;
+    margin: 55px 0;
+}
+
 .num-container {
     max-width: 1000px;
     position: relative;
@@ -771,22 +811,74 @@ footer {
 }
 
 
-#vid1 {
-    margin: -275px 0 0 465px;
-    width: 450px;
+.first_sec {
+    width: 50%;
+    float: left;
+}
+
+.video_container {
+    width: 40%;
     height: 450px;
+    float: left;
+}
+
+#vid1 {
+    margin: 100px 0 0 -40px;
+    width: 64%;
 }
 
 #vid2 {
-    margin: -370px 0 0 883px;
-    width: 256px;
-    height: 256px;
+    margin: 0 0 0 0;
+    width: 40%;
 }
 
 #vid3 {
-    margin: -80px 0 0 938px;
+    margin: -155px 0 0 66%;
     width: 180px;
     height: 180px;
+}
+
+.divide {
+    width: 70%;
+}
+
+.divider-work {
+    display: block;
+    margin: 40px auto 50px auto;
+}
+
+.sub_h1 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.soc_under {
+    width: 152px; left: -7px; top: 40px;
+}
+
+#phone_hide {
+    display: none;
+}
+
+.img-popup {
+    display: block;
+    margin: 40px auto 50px auto;
+}
+
+.button_load {
+    max-width: 220px;
+    min-width: 130px;
+    width: 50%;
+    height: 30px;
+    background: #5D3891;
+    border-radius: 15px;
+    color: #F5F5F5;
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 1300px) {
@@ -799,24 +891,1032 @@ footer {
     h1 {
         font-size: 38px;
     }
-
+/*
     #vid1 {
         margin: -275px 0 0 405px;
-        width: 400px;
-        height: 400px;
     }
 
     #vid2 {
         margin: -330px 0 0 793px;
-        width: 206px;
-        height: 206px;
     }
 
     #vid3 {
         margin: -85px 0 0 828px;
+    }
+*/
+    .nav-link {
+        display: none;
+    }
+
+    #phone {
+        margin-left: 40%;
+    }
+
+    .subconsult, .subconsult form{
+        width: 50%;
+    }
+}
+
+.num-circle {
+    width: 186px;
+    left: -24px;
+    top: -38px;
+}
+
+@media (max-width: 1100px) {
+    #consult_divider {
+        width: 100%;
+    }
+   .subconsult span {
+        font-size: 36px;
+    }
+    .subconsult p {
+        font-size: 17px;
+    }
+    .sec1 p, .sec2 ul, .sec2 p, .sec3 ul {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .consult input {
+        width: 140px;
+        height: 48px;
+        margin-top: 50px;
+        margin-left: 5%;
+        border-radius: 15px;
+    }
+
+    .consult input::placeholder {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    #id_name, #id_phone_number{
+        width: 80%;
+    }
+
+    #id_email {
+        width: 150%;
+    }
+
+    .col-auto {
+        width: 45%;
+    }
+
+    .mb-3 {
+        margin-left: 32%;
+    }
+    .sub_h1 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .description p {
+        font-size: 16px;
+    }
+    .subconsult span {
+        font-size: 32px;
+    }
+    .subconsult p {
+        font-size: 15px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    #vid3 {
         width: 150px;
         height: 150px;
+    }
+    .num {
+        font-size: 16px;
+        width: 130px;
+    }
+    #phone {
+        margin-left: 35%;
+    }
+    .box {  
+        box-shadow: 0px 0px 60px 40px #5D3891;
+        border-radius: 180px;
+    }
+    .side-image1 {
+        border-radius: 0px 170px;
+    }
+    .side-image2 {
+        border-radius: 170px;
+    }
+
+    .side-image3 {
+        border-radius: 170px 0px;
+    }
+    .divider-work {
+        margin: 35px auto 25px auto;
+        width: 150px;
+        height: 150px;
+    }
+    .sub_h1 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .card {
+      margin: 15px;
+      width: 270px;
+      height: 330px;
+
+      border-radius: 20px;
+    }
+
+    .footer-menu {
+        margin-left: 15px;
+    }
+
+    .footer-social {
+        margin-right: 15px;
+    }
+
+    .footer-contact {
+
+    }
+}
+
+@media (max-width: 900px) {
+    h1 {
+        width: 100%;
+        font-size: 32px;
+    }
+    .num-circle {
+        width: 176px;
+    }
+    .subconsult span {
+        font-size: 28px;
+    }
+    #phone {
+        margin-left: 30%;
+    }
+    #logo {
+        width: 140px;
+        height: 140px;
+    }
+    .button {
+        width: 200px;
+        height: 60px;
+        font-size: 15px;
+    }
+    .box {
+        border-radius: 140px;
+    }
+    .side-image1 {
+        border-radius: 0px 125px;
+    }
+    .side-image2 {
+        border-radius: 125px;
+    }
+
+    .side-image3 {
+        border-radius: 125px 0px;
+    }
+
+    .divider-work {
+        width: 130px;
+        height: 130px;
+    }
+    .sub_h1 {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .mySlides {
+      margin: 15px;
+      width: 200px;
+      height: 270px;
+      border-radius: 45px;
+    }
+    .card span {
+        width: 70%;
+    }
+
+    .num-container h3 {
+        font-size: 1em;
+    }
+
+    .numeffect {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        width: 100%;
+        font-size: 28px;
+        line-height: 60px;
+    }
+    .num-circle {
+        width: 160px;
+        left: -26px;
+        top: -34px;
+    }
+    #logo {
+        width: 130px;
+        height: 130px;
+    }
+    #phone {
+        margin-left: 28%;
+    }
+    .num-link span {
+        font-size: 14px;
+    }
+    #vid1 {
+        margin: 120px 0 0 -30px;
+    }
+
+    #vid2 {
+        margin: 20px 0 0 0;
+    }
+
+    #vid3 {
+        width: 120px;
+        height: 120px;
+        margin: -120px 0 0 66%;
+    }
+    .description p {
+        font-size: 15px;
+        margin-right: 30px;
+        width: 75%;
+    }
+    .socials {
+        margin: 0 5px 0 5px;
+        width: 24px; left: -8px;
+    }
+    .sub_h1 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .button {
+        width: 180px;
+        height: 50px;
+        font-size: 14px;
+    }
+    .video_container {
+        height: 400px;
+    }
+    .soc_under {
+        width: 138px;
+        left: -8px;
+        top: 36px;
+    }
+    .mySlides {
+      margin: 15px;
+      width: 175px;
+      height: 240px;
+      border-radius: 45px;
+    }
+
+    .mySlides span {
+        font-size: 14px;
+    }
+
+    .mySlides svg {
+        width: 60px;
+        height: 60px;
+    }
+
+    header {
+        width: 100%;
+        height: 150px;
+    }
+
+    .consult form { 
+        margin-right: 10px;
+    }
+
+    .subconsult {
+        margin-left: 20px;
+    }
+
+    .subconsult span {
+        font-size: 26px;
+    }
+
+    .box-section3 {
+        margin: 20% 0 0 7%;
+        width: 40%;
+        height: 500px;
+    }
+
+    .num-container div {
+        margin: 0 10px;
+    }
+
+    .numeffect {
+        padding: 18px;
+    }
+
+    .num-container h3 {
+        font-size: 0.9em;
+    }
+    #onas {
+        height: 930px;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        width: 100%;
+        font-size: 26px;
+        line-height: 52px;
+        height: 145px;
+    }
+
+    #vid2 {
+        margin: 40px 0 0 0;
+    }
+
+    #vid3 {
+        width: 80px;
+        height: 80px;
+        margin: -100px 0 0 66%;
+    }
+    .num-link {
+        margin-left: 56px;
+    }
+    #phone {
+        margin-left: 25%;
+    }
+    .video_container {
+        height: 355px;
+    }
+    #logo {
+        width: 110px;
+        height: 110px;
+    }
+    .num-circle {
+        width: 125px;
+        left: -17px;
+        top: -22px;
+    }
+    .num-link span {
+        font-size: 12px;
+    }
+
+    .mySlides {
+        width: 135px;
+        height: 180px;
+    }
+
+    .mySlides svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mySlides span {
+        font-size: 11px;
+    }
+
+    .slideshow-container {
+        height: 250px;
+    }
+    .subconsult span {
+        font-size: 22px;
+    }
+    .consult {
+        height: 250px;
+    }
+
+
+    .consult input {
+        height: 48px;
+        margin-top: 50px;
+        margin-left: 5%;
+        border-radius: 15px;
+    }
+
+    .consult input::placeholder {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    #id_name, #id_phone_number{
+        width: 70%;
+    }
+
+    #id_email {
+        width: 120%;
+    }
+
+    .col-auto {
+        width: 45%;
+    }
+
+    .mb-3 {
+        margin-left: 20%;
+    }
+
+    .box-section1 {
+        margin: 15% 0 0 7%;
+        width: 40%;
+        height: 500px;
+    }
+
+    .box-section2 {
+        margin: 20% 7% 0 0;
+        width: 40%;
+        height: 500px;
+    }
+
+    .box-section3 {
+        margin: 10% 0 0 7%;
+        width: 40%;
+        height: 500px;
+    }
+
+    .box-section3 li {
+        list-style-type: none;
+    }
+
+    .box-section3 ul {
+        padding: 0px;
+    }
+
+    .box-section3 h2 {
+        margin-top: 0;
+    }
+
+    .box h2 {
+        line-height: 30px;
+    }
+
+    .num-container div {
+        margin: 0 5px;
+    }
+
+    .numeffect {
+        padding: 18px;
+    }
+
+    .num-container h3 {
+        font-size: 0.9em;
+        width: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 125px;
+    }
+
+    h1 {
+        font-size: 24px;
+        line-height: 42px;
+        height: 134px;
+    }
+
+    .num-link {
+        margin-left: 40px;
+    }
+    #phone {
+        margin-left: 21%;
+    }
+    #vid1 {
+        margin: 120px 0 0 0;
+        width: 55%;
+    }
+
+    #vid2 {
+        margin: 55px 0 0 0;
+        width: 34%;
+    }
+
+    #vid3 {
+        width: 70px;
+        height: 70px;
+        margin: -86px 0 0 66%;
+    }
+
+    .button {
+        width: 140px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .sub_h1 {
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .description {
+        height: 210px;
+    }
+    .description p {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .mySlides {
+        width: 120px;
+        height: 180px;
+        margin: 10px;
+    }
+    .mySlides span {
+        margin: 5px 8px 5px;
+    }
+
+    .mySlides svg {
+        margin-top: 15px;
+    }
+    .subconsult span {
+        font-size: 24px;
+        line-height: 26px;
+    }
+     .consult {
+        height: 260px;
+    }
+
+    .box {
+        border-radius: 100px;
+    }
+
+    .consult input {
+        padding-left: 10px;
+    }
+    .num-container div {
+        margin: 0 5px;
+    }
+
+    .numeffect {
+        padding: 13px;
+    }
+
+    .num-container h3 {
+        font-size: 0.8em;
+        width: 100px;
+    }
+
+    #onas {
+        height: 950px;
+    }
+
+    footer h4 {
+        font-size: 14px;
+    }
+
+    footer p, footer a, footer span {
+        font-size: 12px;
+    }
+
+    .footer-menu {
+        margin-left: 15px;
+    }
+
+    .footer-social {
+        margin-right: 15px;
+    }
+
+    .footer-contact {
+        
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        height: 100px;
+    }
+     #logo {
+        width: 90px;
+        height: 90px;
+    }
+    .first_sec {
+        margin-left: 15px;
+    }
+    h1 {
+        font-size: 20px;
+        line-height: 36px;
+        height: 120px;
+        margin-bottom: 0px;
+        height: 105px;
+    }
+    .socials {
+        width: 20px;
+    }
+    .soc_under {
+        width: 120px;
+    }
+    #phone {
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+    .circle {
+        width: 350px;
+        height: 350px;
+    }
+    .plain {
+        width: 95px;
+    }
+    .num-link {
+        margin-left: 0px;
+    }
+    .soc_under {
+        top: 30px;
+    }
+    #vid1 {
+        margin-top: 94px;
+    }
+    #vid3 {
+        width: 50px;
+        height: 50px;
+        margin: -45px 0 0 66%;
+    }
+    .sub_h1 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .button {
+        margin-top: 15px;
+        width: 120px;
+        height: 40px;
+        font-size: 11px;
+    }
+    .video_container {
+        height: 270px;
+    }
+    .description {
+        height: 300px;
+    }
+    .description p {
+        margin-right: 20px;
+    }
+    #more {
+        text-align: center;
+    }
+
+    .vacancy_name {
+        font-size: 16px;
+    }
+
+    .vacancy_name_desc {
+        font-size: 12px;
+    }
+
+    .wage {
+        font-size: 16px;
+    }
+
+    .mySlides {
+        width: 90px;
+        height: 180px;
+        margin: 5px;
+        border-radius: 30px;
+    }
+    .mySlides span {
+        margin: 5px 8px 5px;
+        font-size: 11px;
+    }
+
+    .mySlides svg {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .consult {
+        height: 310px;
+    }
+
+    .consult input {
+        height: 48px;
+        margin: 30px 10% 0px;
+        border-radius: 15px;
+    }
+
+    .consult input::placeholder {
+        font-size: 15px;
+        line-height: 19px;
+    }
+
+    #id_name, #id_phone_number, #id_email {
+        width: 70%;
+    }
+
+    #id_phone_number, #id_email {
+        margin-top: 15px;
+    }
+
+    .col-auto {
+        width: 100%;
+    }
+
+    .mb-3 {
+        margin-left: 35%;
+    }
+
+    .box {
+        border-radius: 90px;
+    }
+
+    .side-image1 {
+        border-radius: 70px;
+        width: 90%;
+        height: 250px;
+        object-position: top;
+    }
+
+    .box-section1 {
+        width: 90%;
+        margin: 12% 0 0 5%;
+        height: 430px;
+    }
+
+    .side-image2 {
+        border-radius: 70px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .box-section2 {
+        width: 90%;
+        margin: 12% 5% 0 5%;
+        height: 430px;
+    }
+
+    .box-section2 h2 {
+        margin-top: 0px;
+        line-height: 32px;
+    }
+
+    .box-section2 li, .box-section3 li {
+        list-style-type: none;
+    }
+
+    .box-section2 ul, .box-section3 ul {
+        padding-left: 0px;
+    }
+
+    .side-image3 {
+        border-radius: 70px;
+        width: 90%;
+        height: 250px;
+    }
+
+    .box-section3 {
+        width: 90%;
+        margin: 10% 5% 0 5%;
+        height: 430px;
+    }
+
+    .box-section3 h2 {
+        margin-top: 0px;
+        line-height: 32px;
+    }
+
+    .consult form {
+        float: none;
+        margin-right: 0px;
+    }
+
+    .subconsult {
+        margin-top: 0px;
+        height: 90%;
+    }
+
+    #submit {
+        margin-left: 0px;
+    }
+
+    .img-popup {
+        margin: 20px auto 25px auto;
+        width: 130px;
+        height: 120px;
+    }
+
+    #onas p {
+        margin: 35px 0px;
+    }
+
+    .num-container div {
+        margin: 0 5px;
+    }
+
+    .numeffect {
+        padding: 8px;
+        font-size: 24px;
+    }
+
+    .num-container h3 {
+        font-size: 0.7em;
+        width: 80px;
+    }
+
+    #onas {
+        height: 1030px;
+    }
+
+    footer h4 {
+        font-size: 12px;
+    }
+
+    footer p, footer a, footer span {
+        font-size: 11px;
+    }
+
+    .footer-menu {
+        margin-left: 15px;
+    }
+
+    .footer-social {
+        margin-right: 15px;
+    }
+
+    .footer-contact {
+        
+    }
+}
+
+
+@media (max-width: 400px) {
+    header {
+        height: 90px;
+    }
+     #logo {
+        width: 80px;
+        height: 80px;
+    }
+    .first_sec {
+        margin-left: 8px;
+    }
+    h1 {
+        font-size: 17px;
+        line-height: 30px;
+        height: 110px;
+        margin-bottom: 0px;
+        height: 90px;
+    }
+    .socials {
+        width: 20px;
+    }
+    .soc_under {
+        width: 150px;
+    }
+    #phone {
+        margin-left: 9%;
+        margin-right: 9%;
+    }
+    .circle {
+        width: 250px;
+        height: 250px;
+    }
+    .plain {
+        width: 95px;
+    }
+    .num-link {
+        margin-left: 0px;
+    }
+    .soc_under {
+        top: 30px;
+    }
+
+    #vid3 {
+        width: 50px;
+        height: 50px;
+    }
+    .sub_h1 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .button {
+        margin-top: 15px;
+        width: 120px;
+        height: 40px;
+        font-size: 11px;
+    }
+    .video_container {
+        height: 270px;
+    }
+
+    .num-circle, .num, #phone {
+        display: none;
+    }
+
+    #phone_hide {
+        display: inline-block;
+    }
+
+    .phone_awesome {
+        width: 20px;
+        height: 20px;
+    }
+
+    .num-link {
+        margin-left: 20%;
+    }
+
+    .description {
+        height: 350px;
+    }
+
+    .sub_description {
+        margin-top: 25px;
+    }
+    .description p {
+        margin-right: 10px;
+    }
+
+    #more {
+        height: 100px;
+    }
+
+    .divider-work {
+        width: 100px;
+        height: 100px;
+    }
+
+    .button_load {
+        font-size: 14px;
+    }
+
+    .mySlides {
+        width: 83px;
+        height: 180px;
+        margin: 3px;
+        border-radius: 25px;
+    }
+    .mySlides span {
+        margin: 5px;
+        font-size: 11px;
+    }
+
+    .mySlides svg {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .next {
+        margin-right: -8px;
+    }
+
+    .prev {
+        margin-left: -8px;
+    }
+
+    .consult {
+        height: 380px;
+    }
+
+    .consult form {
+        width: 38%;
+    }
+
+    .subconsult span {
+        font-size: 21px;
+    }
+
+    .num-container div {
+        margin: 0 5px;
+    }
+
+    .numeffect {
+        padding: 6px;
+        font-size: 22px;
+    }
+
+    .num-container h3 {
+        font-size: 0.6em;
+        width: 70px;
+    }
+
+    #onas {
+        height: 1200px;
+    }
+
+    footer h4 {
+        font-size: 12px;
+    }
+
+    footer p, footer a, footer span {
+        font-size: 11px;
+    }
+
+    .footer-menu {
+        margin-left: 15px;
+    }
+
+    .footer-social {
+        margin-right: 15px;
+    }
+
+    .footer-contact {
+        width: 85px;
     }
 
 }
 
+@media (max-width: 360px) {
+    .num-container h3 {
+        font-size: 0.8em;
+        width: 100px;
+    }
+}
+
+@media (max-width: 330px) {
+    #onas {
+        height: 1280px;
+    }
+}
