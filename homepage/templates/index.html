@@ -26,8 +26,8 @@
                     <li class="nav-link"><a class="plain" href="#link003"><span>О нас</span><img style="width: 61.46px; left: -8px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
                     <li class="nav-link"><a class="plain" href="#link004"><span>Контакты</span><img style="width: 76.59px; left: -1px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
                     <li class="num-link" id="phone">
-                        <a class="plain" href="tel:+48790655868">
-                            <span class="num">+48 790 655 868</span>
+                        <a class="plain" href="tel:+48795761031">
+                            <span class="num">+48 795 761 031</span>
                             <img src="{% static 'images/circle-17.svg' %}" class="underline num-circle">
                         </a>
                     </li>
@@ -48,7 +48,7 @@
                 <section class="first_sec">
                     <h1><b>НОВЫЕ ИММИГРАЦИОННЫЕ РЕШЕНИЯ</b></h1>
                     <span class="sub_h1">Работа в Польше и ЕС</span>
-                    <div class="button"><a href="#consult" style="color: #F5F5F5;">Связаться с нами</a></div>
+                    <div class="button"><a href="#consulting" style="color: #F5F5F5;">Связаться с нами</a></div>
                 </section>
 
                 <div class='video_container'>
@@ -142,27 +142,29 @@
                         </div>
                     </div>
                 </div>
-                <div data-aos="zoom-in-up" class="consult" id="consult">
-                    <div class="subconsult">
-                        <span>Бесплатная консультация</span>
-                        <img id='consult_divider' src="{% static 'images/divider-12 1.png' %}">
+                <div id="consulting">
+                    <div data-aos="zoom-in-up" class="consult" id="consult">
+                        <div class="subconsult">
+                            <span>Бесплатная консультация</span>
+                            <img id='consult_divider' src="{% static 'images/divider-12 1.png' %}">
 
-                        <p>Оставьте заявку на бесплатную консультацию, наши специлисты помогут вам определиться с выбором,
-                            и подберут для вас лучшие предложения исходя из ваших предпочтений</p>
+                            <p>Оставьте заявку на бесплатную консультацию, наши специлисты помогут вам определиться с выбором,
+                                и подберут для вас лучшие предложения исходя из ваших предпочтений</p>
+                        </div>
+    <!--                    <form method="post">-->
+    <!--                        {% csrf_token %}-->
+    <!--                        <input class="input" type="text" placeholder="Ваше Имя" for="name">-->
+    <!--                        <input id="phone" class="input" type="text" placeholder="Телефон" for="phone">-->
+    <!--                        <input class="input" id="email" type="text" placeholder="Электронная почта" for="email">-->
+    <!--                        <button id="submit">-->
+    <!--                            <img class="submit" src="{% static 'Group 10.png' %}">-->
+    <!--                        </button>-->
+    <!--                    </form>-->
+
+                        {% block page %}
+
+                        {% endblock %}
                     </div>
-<!--                    <form method="post">-->
-<!--                        {% csrf_token %}-->
-<!--                        <input class="input" type="text" placeholder="Ваше Имя" for="name">-->
-<!--                        <input id="phone" class="input" type="text" placeholder="Телефон" for="phone">-->
-<!--                        <input class="input" id="email" type="text" placeholder="Электронная почта" for="email">-->
-<!--                        <button id="submit">-->
-<!--                            <img class="submit" src="{% static 'Group 10.png' %}">-->
-<!--                        </button>-->
-<!--                    </form>-->
-
-                    {% block page %}
-
-                    {% endblock %}
                 </div>
                 <img data-aos="zoom-in-up" src="{% static 'images/effect-03 1.png' %}" class="img-popup">
                 <div id="link003">
@@ -276,8 +278,7 @@
                     <p>NIP 6793188526</p>
                     <p>REGON:384159160</p>
                     <p>Siedziba: Gęsia 8 / 205, 31-535 Kraków</p>
-                    <p>+48 790 655 868</p>
-                    <p>+48 881 456 477</p>
+                    <p>+48 795 761 031</p>
                     <p>info@fargoservice.pl</p>
 
                 </div>

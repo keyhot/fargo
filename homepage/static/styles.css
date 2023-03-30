@@ -326,11 +326,8 @@ h2 {
 }
 
 .small {
-    margin: 5px 0 10px 38px;
-    width: 170px;
-    height: 32px;
-    border-radius: 28px;
-    margin-left: 38px;
+    margin: 5px auto 10px;
+    height: 30px;
     text-align: center;
     background: #5D3891;
     border-radius: 15px;
@@ -1025,7 +1022,7 @@ footer {
     .card {
       margin: 15px;
       width: 270px;
-      height: 330px;
+      height: 350px;
 
       border-radius: 20px;
     }
@@ -1359,6 +1356,7 @@ footer {
     .num-container h3 {
         font-size: 0.9em;
         width: 120px;
+        height: 36px;
     }
 }
 
@@ -1693,6 +1691,10 @@ footer {
 
     .num-container div {
         margin: 0 5px;
+    }
+
+    .num-container {
+        justify-content: space-evenly;
     }
 
     .numeffect {
