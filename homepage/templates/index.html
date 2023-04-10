@@ -80,7 +80,7 @@
                 <section data-aos="zoom-in-up" class="vacancies" id="rabota">
                     {% for x in myjobs %}
                         <div class="card">
-                            <img src="media/{{ x.photo }}">
+                            <img src="{% get_media_prefix %}{{ x.photo }}">
                             <span class="vacancy_name">{{ x.name }}</span>
                             <span class="vacancy_name_desc">{{ x.city }}</span>
                             <span class="wage">{{ x.wage }}</span>
