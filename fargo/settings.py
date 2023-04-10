@@ -82,19 +82,19 @@ WSGI_APPLICATION = 'fargo.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('PSQL_DB_NAME'),
-        'USER': os.environ.get('PSQL_USER'),
-        'PASSWORD': os.environ.get('PSQL_PASSWORD'),
-        'HOST': os.environ.get('PSQL_DB_HOST'),
-        'PORT': '5432',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': os.environ.get('PSQL_DB_NAME'),
+    #     'USER': os.environ.get('PSQL_USER'),
+    #     'PASSWORD': os.environ.get('PSQL_PASSWORD'),
+    #     'HOST': os.environ.get('PSQL_DB_HOST'),
+    #     'PORT': '5432',
+    # }
 
-# 'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'db.sqlite3',
-#     }
+'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
+    }
 }
 
 

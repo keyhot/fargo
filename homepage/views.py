@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.template import loader
 from .models import Job, Member
 from .forms import NameForm
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 
 
 def members(request):
@@ -36,7 +36,17 @@ def get_name(request):
 
 class JobListView(ListView):
     model = Job
-    template_name = 'member_djangoform.html'
+    template_name = 'all_jobs.html'
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(JobListView, self).get_context_data(*args, **kwargs)
+        context['myjobs'] = Job.objects.all()
+        return context
+
+
+class JobDetailView(DetailView):
+    model = Job
+    template_name = "job_details.html"
 
 
 class CreateMemberView(CreateView):
@@ -46,7 +56,7 @@ class CreateMemberView(CreateView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(CreateMemberView, self).get_context_data(*args, **kwargs)
-        context['myjobs'] = Job.objects.all()
+        context['myjobs'] = Job.objects.order_by('created_at')[:3]
         return context
 
     def get_success_url(self):

@@ -1,0 +1,15 @@
+{% extends 'less_circles.html' %}
+{% load static %}
+{% block page %}
+    <section data-aos="zoom-in-up" class="vacancies" id="rabota">
+      {% for x in myjobs %}
+        <div class="card">
+            <img src="{% get_media_prefix %}{{ x.photo }}">
+            <span class="vacancy_name">{{ x.name }}</span>
+            <span id="ket" class="vacancy_name_desc">{{ x.city }}</span>
+            <span class="wage">{{ x.wage }}</span>
+            <div style="height: 50px;"><a href="/jobs/{{ x.id }}/" class="small">Подробнее</a></div>
+        </div>
+      {% endfor %}
+    </section>
+{% endblock %}

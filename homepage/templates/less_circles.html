@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block circles %}
+    <div class="circle left" style="top: 143px; left: 10%;"></div>
+    <div class="circle right" style="right: 5%; top: 428px; background: #F99417;"></div>
+    <div class="circle left" style="left: 5%; top: 1000px;"></div>
+
+    <div id="container">
+            <header>
+                <ul id="nav">
+                  <li><a href="/"><img src="{% static 'images/fargoLogo2.png' %}" id="logo"></a></li>
+                    <li class="nav-link"><a class="plain" href="#link001"><span>Услуги</span><img style="width: 73.93px; left: -10px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#link002"><span>Работа в ЕС</span><img style="width: 101.55px; left: -5px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#link003"><span>О нас</span><img style="width: 61.46px; left: -8px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
+                    <li class="nav-link"><a class="plain" href="#link004"><span>Контакты</span><img style="width: 76.59px; left: -1px;" src="{% static 'images/line-06.svg' %}" class="underline"></a></li>
+                    <li class="num-link" id="phone">
+                        <a class="plain" href="tel:+48795761031">
+                            <span class="num">+48 795 761 031</span>
+                            <img src="{% static 'images/circle-17.svg' %}" class="underline num-circle">
+                        </a>
+                    </li>
+                    <li class="num-link">
+                        <div>
+                            <a href="tel:+48790655868" target="_blank" rel="noopener noreferrer"  id="phone_hide">
+                                <img src="{% static 'images/phone-solid.svg' %}" class="phone_awesome">
+                            </a>
+                            <a class="plain" href="https://www.instagram.com/fargo_service/"  target="_blank" rel="noopener noreferrer"><img src="{% static 'images/Group 2.png' %}" class="socials"></a>
+                            <a class="plain" href="https://www.facebook.com/profile.php?id=100090271071737"  target="_blank" rel="noopener noreferrer"><img src="{% static 'images/bxl-facebook.png' %}" class="socials"></a>
+                            <a class="plain" href="https://t.me/FargoConsultBot" target="_blank" rel="noopener noreferrer"><img src="{% static 'images/bxl-telegram.png' %}" class="socials"></a>
+                        </div>
+                        <img src="{% static 'images/line-06.svg' %}" class="underline soc_under">
+                    </li>
+                </ul>
+            </header>
+            {% block page %}
+
+            {% endblock %}
+            <div class="space_creator"></div>
+        </div>
+    </div>
+{% endblock %}

@@ -4,7 +4,7 @@
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
-{% block page %}
+{% block forms %}
     <form method="POST">
         {% csrf_token %}
         {% bootstrap_form form layout='inline'%}
