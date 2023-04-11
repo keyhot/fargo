@@ -4,6 +4,8 @@ from django.template import loader
 from .models import Job, Member
 from .forms import NameForm
 from django.views.generic import CreateView, ListView, DetailView
+import requests
+from config import ADMIN, TOKEN
 
 
 def members(request):
@@ -13,25 +15,6 @@ def members(request):
       'myjobs': myjobs,
     }
     return HttpResponse(template.render(context, request))
-
-
-def get_name(request):
-    submitted = False
-    if request.method == 'POST':
-        form = NameForm(request.POST)
-        if form.is_valid():
-            cd = form.cleaned_data
-            template = loader.get_template('form_success.html')
-            context = {
-                'form': form,
-            }
-            return HttpResponseRedirect('/data?=submittedTrue')
-    else:
-        form = NameForm(request.POST)
-        if 'submitted' in request.GET:
-            submitted = True
-
-        return render(request, 'form_success.html', {'form': form, 'submitted': submitted})
 
 
 class JobListView(ListView):
@@ -60,4 +43,8 @@ class CreateMemberView(CreateView):
         return context
 
     def get_success_url(self):
+        text = f'Зарегистрирован новый клиент!\n/admin'
+        for chat_id in ADMIN:
+            base_tg_url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={chat_id}&text={text}"
+            requests.get(url=base_tg_url)
         return self.request.path

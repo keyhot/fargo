@@ -126,8 +126,9 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_L10N = True
 
+USE_TZ = True
 
 # AWS S3 SETTINGS
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')

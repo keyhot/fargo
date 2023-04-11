@@ -5,6 +5,11 @@ from keyboards import client_kb
 from database import bot_db
 
 
+async def send_notification():
+    for id in ADMIN:
+        await bot.send_message(id, )
+
+
 # @dp.message_handler(commands=['start'])
 async def start_handler(message: types.Message):
     await bot.send_message(message.chat.id, f'Здравствуйте, {message.from_user.full_name}!\n\n'

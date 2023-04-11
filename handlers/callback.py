@@ -2,7 +2,7 @@ from aiogram.types import ParseMode, InlineKeyboardMarkup, InlineKeyboardButton
 from config import bot, dp
 from aiogram import types, Dispatcher
 from .fsm_anketa import fsm_start
-from database.bot_db import sql_command_delete
+from database.bot_db import sql_command_all_job
 
 
 @dp.callback_query_handler(lambda call: call.data == "que")
@@ -30,11 +30,12 @@ async def application(call: types.CallbackQuery):
 
 @dp.callback_query_handler(lambda call: call.data == "vac")
 async def vacancies(call: types.CallbackQuery):
-    markup = InlineKeyboardMarkup()
-    button = InlineKeyboardButton('Next', callback_data='button_call_2')
-    markup.add(button)
-
-    await bot.send_message(call.message.chat.id, f'В процессе',  reply_markup=markup)
+    jobs = await sql_command_all_job()
+    for job in jobs:
+        await bot.send_message(call.message.chat.id, f"{job[1]}\n"
+                                                     f"Город: {job[2]}\n"
+                                                     f"Зарплата: {job[3]}\n"
+                                                     f"Детали: {job[5]}\n")
 
 
 @dp.callback_query_handler(lambda call: call.data == "button_call_1")
