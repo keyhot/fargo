@@ -1,13 +1,13 @@
 {% extends 'less_circles.html' %}
-{% load static %}
+{% load static i18n %}
 {% block page %}
     <div style="min-height: 800px; text-align: center;">
-        <h2>Информация о вакансии:</h2>
+        <h2>{% translate "Информация о вакансии:" %}</h2>
         <img style="display: block; margin: 20px auto; height: 250px; width: 250px; border-radius: 20px; object-fit: cover;"
              src="{% get_media_prefix %}{{ object.photo }}">
-        <div><b>Наименование</b>: {{object.name}}</div>
-        <div><b>Город</b>: {{object.city}}</div>
-        <div><b>Зарплата</b>: {{object.wage}}</div>
-        <div><b>Описание</b>: {{object.details}}</div>
+        <div><b>{% translate "Наименование" %}</b>: {{object.name}}</div>
+        <div><b>{% translate "Город" %}</b>: {{object.city}}</div>
+        <div><b>{% translate "Зарплата" %}</b>: {{object.wage}}</div>
+        <div><b>{% translate "Описание" %}</b>: {{object.details}}</div>
     </div>
 {% endblock %}

@@ -1,15 +1,14 @@
 {% extends 'index.html' %}
-{% load bootstrap5 %}
-{% load static %}
+{% load static i18n bootstrap5 %}
 {% bootstrap_css %}
 {% bootstrap_javascript %}
 
 {% block forms %}
-    <form method="POST" onsubmit="alert('Ваши данные успешно отправлены! Ожидайте.');">
+    <form method="POST" onsubmit="alert('{% translate "Ваши данные успешно отправлены! Ожидайте." %}');">
         {% csrf_token %}
         {% bootstrap_form form layout='inline'%}
         {% buttons %}
-            <button id="submit" onsubmit="javascript:alert('success');">
+            <button id="submit">
                <img class="submit" src="{% static 'images/Group 10.png' %}">
             </button>
         {% endbuttons %}

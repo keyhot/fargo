@@ -1,12 +1,13 @@
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Member(models.Model):
-    name = models.CharField(max_length=255, verbose_name="Имя")
-    phone_number = models.CharField(max_length=255, verbose_name="Телефон")
-    email = models.CharField(max_length=255, verbose_name="Эл. почта")
+    name = models.CharField(max_length=255, verbose_name=_("Имя"))
+    phone_number = models.CharField(max_length=255, verbose_name=_("Телефон"))
+    email = models.CharField(max_length=255, verbose_name=_("Эл. почта"))
     created_at = models.DateTimeField(
-        verbose_name="Дата и время отправки заявки",
+        verbose_name=_("Дата и время отправки заявки"),
         auto_now_add=True,
     )
 
@@ -14,8 +15,8 @@ class Member(models.Model):
         return f"{self.name}"
 
     class Meta:
-        verbose_name = "Клиент"
-        verbose_name_plural = "Клиенты"
+        verbose_name = _("Клиент")
+        verbose_name_plural = _("Клиенты")
 
 
 class Job(models.Model):

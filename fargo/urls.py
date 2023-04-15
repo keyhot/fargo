@@ -1,16 +1,23 @@
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.conf import settings
 from django.conf.urls.static import static
-from homepage import views
+from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = [
-    path('', include('homepage.urls')),
     path('admin/', admin.site.urls),
     path('admin/clearcache/', include('clearcache.urls')),
-    path('jobs/', views.JobListView.as_view(), name='jobs'),
-    path('jobs/<int:pk>/', views.JobDetailView.as_view(), name='job-detail'),
 ]
+
+urlpatterns += i18n_patterns(
+    path('', include('homepage.urls')),
+    prefix_default_language=False
+)
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+if 'rosetta' in settings.INSTALLED_APPS:
+    urlpatterns += [
+        re_path(r'^rosetta/', include('rosetta.urls'))
+    ]

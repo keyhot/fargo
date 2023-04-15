@@ -1,5 +1,6 @@
 {% extends 'less_circles.html' %}
 {% load static %}
+{% load i18n %}
 {% block page %}
     <section data-aos="zoom-in-up" class="vacancies" id="rabota">
       {% for x in myjobs %}
@@ -8,7 +9,7 @@
             <span class="vacancy_name">{{ x.name }}</span>
             <span id="ket" class="vacancy_name_desc">{{ x.city }}</span>
             <span class="wage">{{ x.wage }}</span>
-            <div style="height: 50px;"><a href="/jobs/{{ x.id }}/" class="small">Подробнее</a></div>
+            <div style="height: 50px;"><a href="/jobs/{{ x.id }}/" class="small">{% translate "Подробнее" %}</a></div>
         </div>
       {% endfor %}
     </section>

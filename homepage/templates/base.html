@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+{% load static i18n %}
+<html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,25 +19,25 @@
         <footer class="footer" id="contact">
             <div class="container">
                 <div class="footer-menu">
-                    <h4>Навигация</h4>
+                    <h4>{% translate "Навигация" %}</h4>
                     <ul>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Работа в ЕС</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">{% translate "Услуги" %}</a></li>
+                    <li><a href="#">{% translate "Работа в ЕС" %}</a></li>
+                    <li><a href="#">{% translate "О нас" %}</a></li>
+                    <li><a href="#">{% translate "Контакты" %}</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
-                    <h4>Юридическая информация</h4>
+                    <h4>{% translate "Юридическая информация" %}</h4>
                     <p>NIP 6793188526</p>
                     <p>REGON:384159160</p>
                     <p>Siedziba: Gęsia 8 / 205, 31-535 Kraków</p>
-                    <p>+48 795 761 031</p>
+                    <p>+48 578 579 070</p>
                     <p>info@fargoservice.pl</p>
 
                 </div>
                 <div class="footer-social">
-                    <h4>Социальные сети</h4>
+                    <h4>{% translate "Социальные сети" %}</h4>
                     <ul>
                         <li><a class="plain" href="https://www.instagram.com/fargo_service/" target="_blank" rel="noopener noreferrer"><img style="left: -8px;" src="{% static 'images/Group 2.png' %}" class="socials"><span>Instagram</span></a></li>
                         <li><a class="plain" href="https://www.facebook.com/profile.php?id=100090271071737"  target="_blank" rel="noopener noreferrer"><img style="left: -8px;" src="{% static 'images/bxl-facebook.png' %}" class="socials"><span>Facebook</span></a></li>
