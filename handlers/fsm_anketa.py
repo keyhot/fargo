@@ -3,7 +3,7 @@ from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher.filters.state import State, StatesGroup
 from datetime import datetime
-from client import send_notification
+from .client import send_notification
 
 from config import bot, ADMIN, dp
 from database import bot_db
