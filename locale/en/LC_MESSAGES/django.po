@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-15 13:26+0200\n"
+"POT-Creation-Date: 2023-04-17 03:49+0200\n"
 "PO-Revision-Date: 2023-04-15 13:28+0000\n"
 "Last-Translator:   <azamatov0202@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,29 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\fargo\settings.py:161
+#: .\fargo\settings.py:162
 msgid "English"
 msgstr ""
 
-#: .\fargo\settings.py:162
+#: .\fargo\settings.py:163
 msgid "Russian"
 msgstr ""
 
-#: .\homepage\forms.py:13 .\homepage\models.py:6
+#: .\homepage\models.py:6
 msgid "Имя"
 msgstr "Name"
-
-#: .\homepage\forms.py:14
-msgid "Тел."
-msgstr "Phone"
-
-#: .\homepage\forms.py:15 .\homepage\models.py:8
-msgid "Эл. почта"
-msgstr "Email"
 
 #: .\homepage\models.py:7
 msgid "Телефон"
 msgstr "Phone"
+
+#: .\homepage\models.py:8
+msgid "Эл. почта"
+msgstr "Email"
 
 #: .\homepage\models.py:10
 msgid "Дата и время отправки заявки"
@@ -59,37 +55,34 @@ msgstr "Clients"
 msgid "Подробнее"
 msgstr "Details"
 
-#: .\homepage\templates\base.html:22
+#: .\homepage\templates\base.html:28
 msgid "Навигация"
 msgstr "Navigation"
 
-#: .\homepage\templates\base.html:24
-#: .\homepage\templates\index_circles.html:16
+#: .\homepage\templates\base.html:30 .\homepage\templates\index_circles.html:16
 #: .\homepage\templates\less_circles.html:12
 msgid "Услуги"
 msgstr "Services"
 
-#: .\homepage\templates\base.html:25
-#: .\homepage\templates\index_circles.html:17
+#: .\homepage\templates\base.html:31 .\homepage\templates\index_circles.html:17
 #: .\homepage\templates\less_circles.html:13
 msgid "Работа в ЕС"
 msgstr "Work in the EU"
 
-#: .\homepage\templates\base.html:26
-#: .\homepage\templates\index_circles.html:18
+#: .\homepage\templates\base.html:32 .\homepage\templates\index_circles.html:18
 #: .\homepage\templates\less_circles.html:14
 msgid "О нас"
 msgstr "About us"
 
-#: .\homepage\templates\base.html:27
+#: .\homepage\templates\base.html:33
 msgid "Контакты"
 msgstr "Contacts"
 
-#: .\homepage\templates\base.html:31
+#: .\homepage\templates\base.html:37
 msgid "Юридическая информация"
 msgstr "Legal information"
 
-#: .\homepage\templates\base.html:40
+#: .\homepage\templates\base.html:46
 msgid "Социальные сети"
 msgstr "Social network"
 
@@ -115,8 +108,8 @@ msgid ""
 "трудоустройства, легализациии обустройству жизни и бизнеса в Польше. У нас "
 "работает команда молодых профессионалов, которые имеют опыт в помощи "
 "легализации пребывания иностранцев. Большинство сотрудников имеет "
-"собственный опыт иммиграции в Польшу, и готовы поделиться им с Вами — нашими"
-" клиентами."
+"собственный опыт иммиграции в Польшу, и готовы поделиться им с Вами — нашими "
+"клиентами."
 msgstr ""
 "FARGO Service Sp. z o.o. specializes in providing assistance at all stages "
 "of employment, legalization, arrangement of life and business in Poland. We "
@@ -143,21 +136,21 @@ msgstr "Residence permit in Poland"
 
 #: .\homepage\templates\index.html:53
 msgid ""
-"Карта побыту (Karta pobytu) – это временный вид на жительство в Польше. Этот"
-" документ является заменой визы. Он идентифицирует иностранца и дает право "
-"на проживание в Польше, свободное перемещение по территории Евросоюза, "
-"покупку недвижимости и автомобиля."
+"Карта побыту (Karta pobytu) – это временный вид на жительство в Польше. Этот "
+"документ является заменой визы. Он идентифицирует иностранца и дает право на "
+"проживание в Польше, свободное перемещение по территории Евросоюза, покупку "
+"недвижимости и автомобиля."
 msgstr ""
 "The Pobytu card (Karta pobytu) is a temporary residence permit in Poland. "
 "This document is a substitute for a visa. It identifies a foreigner and "
-"gives the right to live in Poland, free movement across the territory of the"
-" European Union, purchase of real estate and a car."
+"gives the right to live in Poland, free movement across the territory of the "
+"European Union, purchase of real estate and a car."
 
 #: .\homepage\templates\index.html:54
 msgid ""
-"ВНЖ в Польше можно получить на основании работы, при открытии своей польской"
-" компании или учебе. Карта побыту выглядит как стандартная пластиковая карта"
-" Евросоюза, на которой указана личная информация: имя и фамилия, рост, цвет "
+"ВНЖ в Польше можно получить на основании работы, при открытии своей польской "
+"компании или учебе. Карта побыту выглядит как стандартная пластиковая карта "
+"Евросоюза, на которой указана личная информация: имя и фамилия, рост, цвет "
 "глаз, имена родителей, фотография, а также срок действия ВНЖ. Может быть "
 "указана ваша прописка в Польше и польский идентификационный номер PESEL."
 msgstr ""
@@ -165,8 +158,8 @@ msgstr ""
 "opening your Polish company or studying. The card looks like a standard "
 "plastic card of the European Union, which contains personal information: "
 "first and last name, height, eye color, parents' names, photo, as well as "
-"the validity period of the residence permit. Your residence permit in Poland"
-" and the Polish identification number PESEL can be indicated."
+"the validity period of the residence permit. Your residence permit in Poland "
+"and the Polish identification number PESEL can be indicated."
 
 #: .\homepage\templates\index.html:60
 msgid "Работа в Польше и других странах Европы"
@@ -207,16 +200,12 @@ msgid "Изготовление документов для получения �
 msgstr "Production of documents for obtaining a visa"
 
 #: .\homepage\templates\index.html:76
-#, fuzzy
-#| msgid ""
-#| "Сотрудничая с нами вы получаете полный пакет документов для легального "
-#| "трудоустройства в ЕС"
 msgid ""
-"Подача на приглашение, изготовление полного пакета документов для легального"
-" трудоустройства в ЕС, регистрация прописки, страховка."
+"Подача на приглашение, изготовление полного пакета документов для легального "
+"трудоустройства в ЕС, регистрация прописки, страховка."
 msgstr ""
-"By cooperating with us you get a full package of documents for legal "
-"employment in the EU"
+"Submission for an invitation, production of a full package of documents for "
+"legal employment in the EU, registration of residence permit, insurance."
 
 #: .\homepage\templates\index.html:77
 msgid "Полное юридическое сопровождение на всех этапах сотрудничества."
@@ -236,8 +225,8 @@ msgid ""
 "Оплата: чтобы начать процесс подготовки документов, нужно оплатить аванс на "
 "официальный счет компании. Из суммы аванса компания оплачивает "
 "административные услуги и взносы в государственные учреждения Польши, "
-"которые готовят необходимые документы. Также оплата является гарантией того,"
-" что вы 100%% получите легальные документы."
+"которые готовят необходимые документы. Также оплата является гарантией того, "
+"что вы 100%% получите легальные документы."
 msgstr ""
 "Payment: to start the process of preparing documents, you need to pay an "
 "advance to the official account of the company. From the amount of the "
@@ -255,8 +244,8 @@ msgid ""
 "определиться с выбором, и подберут для вас лучшие предложения исходя из "
 "ваших предпочтений"
 msgstr ""
-"Leave a request for a free consultation, our experts will help you decide on"
-" a choice, and will select the best offers for you based on your preferences"
+"Leave a request for a free consultation, our experts will help you decide on "
+"a choice, and will select the best offers for you based on your preferences"
 
 #: .\homepage\templates\index.html:103
 msgid "Цели и стратегия"
@@ -276,17 +265,17 @@ msgid ""
 "трудоустройства, легализации и обустройству жизни и бизнеса в Польше. У нас "
 "работает команда молодых профессионалов, которые имеют опыт в помощи "
 "легализации пребывания иностранцев. Большинство сотрудников имеет "
-"собственный опыт иммиграции в Польшу, и готовы поделиться им с Вами — нашими"
-" клиентами."
+"собственный опыт иммиграции в Польшу, и готовы поделиться им с Вами — нашими "
+"клиентами."
 msgstr ""
 "Poland is one of the youngest and most promising countries of the European "
 "Union, which is developing at a tremendous speed. This is a country with a "
 "high quality of life, it has excellent roads, excellent medical care, and a "
 "high standard of education. That is why many people want to move to live in "
-"Poland. Our company FARGO Service specializes in providing assistance at all"
-" stages of employment, legalization and arrangement of life and business in "
-"Poland. We have a team of young professionals who have experience in helping"
-" to legalize the stay of foreigners. Most of the employees have their own "
+"Poland. Our company FARGO Service specializes in providing assistance at all "
+"stages of employment, legalization and arrangement of life and business in "
+"Poland. We have a team of young professionals who have experience in helping "
+"to legalize the stay of foreigners. Most of the employees have their own "
 "experience of immigration to Poland, and are ready to share it with you — "
 "our clients."
 
@@ -448,8 +437,8 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:264
 msgid ""
-"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or"
-" hyphens."
+"Enter a valid “slug” consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\core\validators.py:276
@@ -645,15 +634,15 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1458
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ] format."
+"“%(value)s” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1466
 #, python-format
 msgid ""
-"“%(value)s” value has the correct format (YYYY-MM-DD "
-"HH:MM[:ss[.uuuuuu]][TZ]) but it is an invalid date/time."
+"“%(value)s” value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1471
@@ -672,8 +661,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1754
 #, python-format
 msgid ""
-"“%(value)s” value has an invalid format. It must be in [DD] "
-"[[HH:]MM:]ss[.uuuuuu] format."
+"“%(value)s” value has an invalid format. It must be in [DD] [[HH:]MM:]ss[."
+"uuuuuu] format."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1758
@@ -832,8 +821,7 @@ msgid "Many-to-many relationship"
 msgstr ""
 
 #. Translators: If found as last label character, these punctuation
-#. characters will prevent the default label_suffix to be appended to the
-#. label
+#. characters will prevent the default label_suffix to be appended to the label
 #: .\venv\Lib\site-packages\django\forms\boundfield.py:176
 msgid ":?.!"
 msgstr ""
@@ -883,8 +871,7 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\fields.py:622
 #, python-format
-msgid ""
-"Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
 "Ensure this filename has at most %(max)d characters (it has %(length)d)."
 msgstr[0] ""
@@ -992,8 +979,7 @@ msgid "The inline value did not match the parent instance."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1435
-msgid ""
-"Select a valid choice. That choice is not one of the available choices."
+msgid "Select a valid choice. That choice is not one of the available choices."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\forms\models.py:1574
@@ -1453,11 +1439,11 @@ msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:127
 msgid ""
-"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or"
-" including the “Referrer-Policy: no-referrer” header, please remove them. "
-"The CSRF protection requires the “Referer” header to do strict referer "
-"checking. If you’re concerned about privacy, use alternatives like <a "
-"rel=\"noreferrer\" …> for links to third-party sites."
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the “Referrer-Policy: no-referrer” header, please remove them. The "
+"CSRF protection requires the “Referer” header to do strict referer checking. "
+"If you’re concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" …> for links to third-party sites."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\csrf.py:136
@@ -1508,8 +1494,8 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:652
 #, python-format
 msgid ""
-"Future %(verbose_name_plural)s not available because "
-"%(class_name)s.allow_future is False."
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\generic\dates.py:692
@@ -1565,10 +1551,10 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
 #, python-format
 msgid ""
-"You are seeing this page because <a "
-"href=\"https://docs.djangoproject.com/en/%(version)s/ref/settings/#debug\" "
-"target=\"_blank\" rel=\"noopener\">DEBUG=True</a> is in your settings file "
-"and you have not configured any URLs."
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
 msgstr ""
 
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
@@ -1594,3 +1580,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
 msgid "Connect, get help, or contribute"
 msgstr ""
+
+#~ msgid "Тел."
+#~ msgstr "Phone"

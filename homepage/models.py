@@ -20,16 +20,22 @@ class Member(models.Model):
 
 
 class Job(models.Model):
-    name = models.CharField(max_length=255)
-    city = models.CharField(max_length=255)
-    wage = models.CharField(max_length=255)
+    name = models.CharField(max_length=255, verbose_name="Название",)
+    city = models.CharField(max_length=255, verbose_name="Город",)
+    wage = models.CharField(max_length=255, verbose_name="Зарплата",)
     photo = models.ImageField(
         verbose_name="Фото",
         upload_to="photos",
         null=True,
         blank=True,
     )
-    details = models.TextField()
+    details = models.TextField(verbose_name="Детали",)
+
+    name_en = models.CharField(default="", max_length=255, verbose_name="Name", )
+    city_en = models.CharField(default="", max_length=255, verbose_name="City", )
+    wage_en = models.CharField(default="", max_length=255, verbose_name="Wage", )
+    details_en = models.TextField(default="", verbose_name="Details", )
+
     created_at = models.DateTimeField(
         verbose_name="Дата и время создания вакансии",
         auto_now_add=True,

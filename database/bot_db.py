@@ -8,14 +8,14 @@ from config import bot
 
 def sql_create():
     global db, cursor
-    db = sqlite3.connect("db.sqlite3")
-    cursor = db.cursor()
-    # db = psycopg2.connect(
-    #     host=os.environ.get('PSQL_DB_HOST'),
-    #     database=os.environ.get('PSQL_DB_NAME'),
-    #     user=os.environ.get('PSQL_USER'),
-    #     password=os.environ.get('PSQL_PASSWORD')
-    # )
+    # db = sqlite3.connect("db.sqlite3")
+    # cursor = db.cursor()
+    db = psycopg2.connect(
+        host=os.environ.get('PSQL_DB_HOST'),
+        database=os.environ.get('PSQL_DB_NAME'),
+        user=os.environ.get('PSQL_USER'),
+        password=os.environ.get('PSQL_PASSWORD')
+    )
     cursor = db.cursor()
     print('CONNECTED TO POSTGRES!')
     db.execute("CREATE TABLE IF NOT EXISTS homepage_member "

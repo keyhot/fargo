@@ -18,7 +18,7 @@ class FSMAdmin(StatesGroup):
 async def fsm_start(message: types.Message):
     if message.chat.type == "private":
         await FSMAdmin.name.set()
-        await message.answer(f"Как к вам обращаться?")
+        await message.answer(f"Введите имя:")
     else:
         await message.reply("Просьба писать боту в личку.")
 

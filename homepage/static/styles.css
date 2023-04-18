@@ -999,6 +999,9 @@ footer {
     #ket {
         display: none;
     }
+    #ket2 {
+        display: none;
+    }
 
     .box {  
         box-shadow: 0px 0px 60px 40px #5D3891;
@@ -1124,8 +1127,8 @@ footer {
         top: -34px;
     }
     #logo {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
     #phone {
         margin-left: 28%;
@@ -1147,7 +1150,7 @@ footer {
         margin: -120px 0 0 66%;
     }
     .description p {
-        font-size: 15px;
+        font-size: 13px;
         margin-right: 30px;
         width: 75%;
     }
@@ -1366,24 +1369,23 @@ footer {
         width: 120px;
         height: 36px;
     }
+    #lang {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 600px) {
     header {
         height: 125px;
     }
-
     h1 {
         font-size: 24px;
         line-height: 42px;
         height: 134px;
     }
 
-    .num-link {
-        margin-left: 40px;
-    }
     #phone {
-        margin-left: 21%;
+        margin-left: 10%;
     }
     #vid1 {
         margin: 120px 0 0 0;
@@ -1410,9 +1412,6 @@ footer {
     .sub_h1 {
         font-size: 14px;
         line-height: 18px;
-    }
-    .description {
-        height: 210px;
     }
     .description p {
         margin-right: 10px;
@@ -1508,8 +1507,8 @@ footer {
         width: 120px;
     }
     #phone {
-        margin-left: 9%;
-        margin-right: 9%;
+        margin-left: 6%;
+        margin-right: 6%;
     }
     .circle {
         width: 350px;
@@ -1544,9 +1543,6 @@ footer {
     }
     .video_container {
         height: 270px;
-    }
-    .description {
-        height: 300px;
     }
     .description p {
         margin-right: 20px;
@@ -1763,11 +1759,11 @@ footer {
         width: 20px;
     }
     .soc_under {
-        width: 150px;
+        top: 30px;
     }
-    #phone {
-        margin-left: 9%;
-        margin-right: 9%;
+
+    #lang {
+        margin-right: 10%;
     }
     .circle {
         width: 250px;
@@ -1775,12 +1771,6 @@ footer {
     }
     .plain {
         width: 95px;
-    }
-    .num-link {
-        margin-left: 0px;
-    }
-    .soc_under {
-        top: 30px;
     }
 
     #vid3 {
@@ -1814,12 +1804,8 @@ footer {
         height: 20px;
     }
 
-    .num-link {
-        margin-left: 20%;
-    }
-
     .description {
-        height: 350px;
+        height: 215px;
     }
 
     .sub_description {

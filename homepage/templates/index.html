@@ -1,5 +1,6 @@
 {% extends 'index_circles.html' %}
 {% load static i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block page %}
     <main>
         <section class="first_sec">
@@ -32,19 +33,31 @@
             <h2 data-aos="zoom-in-up">{% translate "Работа в Польше и других странах ЕС" %}</h2>
         </div>
         <section data-aos="zoom-in-up" class="vacancies" id="rabota">
-            {% for x in myjobs %}
-                <div class="card">
-                    <img src="{% get_media_prefix %}{{ x.photo }}">
-                    <span class="vacancy_name">{{ x.name }}</span>
-                    <span id="ket" class="vacancy_name_desc">{{ x.city }}</span>
-                    <span class="wage">{{ x.wage }}</span>
-                    <div style="height: 50px;"><a href="/jobs/{{ x.id }}/" class="small">{% translate "Подробнее" %}</a></div>
-                </div>
-            {% endfor %}
-
+            {% if LANGUAGE_CODE != "en" %}
+                {% for x in myjobs %}
+                    <div class="card">
+                        <img src="{% get_media_prefix %}{{ x.photo }}">
+                        <span class="vacancy_name">{% trans x.name %}</span>
+                        <span id="ket" class="vacancy_name_desc">{{ x.city }}</span>
+                        <span class="wage">{{ x.wage }}</span>
+                        <div style="height: 50px;"><a href="{% url 'job-detail' x.id %}" class="small">{% translate "Подробнее" %}</a></div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if LANGUAGE_CODE == "en" %}
+                {% for x in myjobs %}
+                    <div class="card">
+                        <img src="{% get_media_prefix %}{{ x.photo }}">
+                        <span class="vacancy_name">{% trans x.name_en %}</span>
+                        <span id="ket2" class="vacancy_name_desc">{{ x.city_en }}</span>
+                        <span class="wage">{{ x.wage_en }}</span>
+                        <div style="height: 50px;"><a href="{% url 'job-detail' x.id %}" class="small">{% translate "Подробнее" %}</a></div>
+                    </div>
+                {% endfor %}
+            {% endif %}
         </section>
 
-        <a href="/jobs/"><div class="button_load" style="margin: 10px auto 15px">{% translate "ЗАГРУЗИТЬ ЕЩЕ" %}</div></a>
+        <a href="{% url 'jobs' %}"><div class="button_load" style="margin: 10px auto 15px">{% translate "ЗАГРУЗИТЬ ЕЩЕ" %}</div></a>
         <div id="link001">
             <div data-aos="zoom-in-up" class="box" id="uslugi">
                 <div data-aos="zoom-in-up" class="sec1">

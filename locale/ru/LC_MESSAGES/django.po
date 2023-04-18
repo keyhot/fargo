@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-15 13:26+0200\n"
+"POT-Creation-Date: 2023-04-17 03:49+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,28 +20,24 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\fargo\settings.py:161
+#: .\fargo\settings.py:162
 msgid "English"
 msgstr ""
 
-#: .\fargo\settings.py:162
+#: .\fargo\settings.py:163
 msgid "Russian"
 msgstr ""
 
-#: .\homepage\forms.py:13 .\homepage\models.py:6
+#: .\homepage\models.py:6
 msgid "Имя"
-msgstr ""
-
-#: .\homepage\forms.py:14
-msgid "Тел."
-msgstr ""
-
-#: .\homepage\forms.py:15 .\homepage\models.py:8
-msgid "Эл. почта"
 msgstr ""
 
 #: .\homepage\models.py:7
 msgid "Телефон"
+msgstr ""
+
+#: .\homepage\models.py:8
+msgid "Эл. почта"
 msgstr ""
 
 #: .\homepage\models.py:10
@@ -60,34 +56,34 @@ msgstr ""
 msgid "Подробнее"
 msgstr ""
 
-#: .\homepage\templates\base.html:22
+#: .\homepage\templates\base.html:28
 msgid "Навигация"
 msgstr ""
 
-#: .\homepage\templates\base.html:24 .\homepage\templates\index_circles.html:16
+#: .\homepage\templates\base.html:30 .\homepage\templates\index_circles.html:16
 #: .\homepage\templates\less_circles.html:12
 msgid "Услуги"
 msgstr ""
 
-#: .\homepage\templates\base.html:25 .\homepage\templates\index_circles.html:17
+#: .\homepage\templates\base.html:31 .\homepage\templates\index_circles.html:17
 #: .\homepage\templates\less_circles.html:13
 msgid "Работа в ЕС"
 msgstr ""
 
-#: .\homepage\templates\base.html:26 .\homepage\templates\index_circles.html:18
+#: .\homepage\templates\base.html:32 .\homepage\templates\index_circles.html:18
 #: .\homepage\templates\less_circles.html:14
 msgid "О нас"
 msgstr ""
 
-#: .\homepage\templates\base.html:27
+#: .\homepage\templates\base.html:33
 msgid "Контакты"
 msgstr ""
 
-#: .\homepage\templates\base.html:31
+#: .\homepage\templates\base.html:37
 msgid "Юридическая информация"
 msgstr ""
 
-#: .\homepage\templates\base.html:40
+#: .\homepage\templates\base.html:46
 msgid "Социальные сети"
 msgstr ""
 
