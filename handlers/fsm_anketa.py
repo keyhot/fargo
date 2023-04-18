@@ -2,8 +2,8 @@ from aiogram import types, Dispatcher
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher.filters.state import State, StatesGroup
-from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from datetime import datetime
+from client import send_notification
 
 from config import bot, ADMIN, dp
 from database import bot_db
@@ -53,6 +53,7 @@ async def load_email(message: types.Message, state: FSMContext):
     await bot_db.sql_command_insert(state)
     await state.finish()
     await message.answer("Регистрация завершена! Ожидайте. В ближайшее время наши сотрудники с вами свяжутся.")
+    await send_notification()
 
 
 async def cancel_registration(message: types.Message, state: FSMContext):

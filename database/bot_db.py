@@ -23,7 +23,7 @@ def sql_create():
     #            "(id INTEGER PRIMARY KEY SERIAL,"
     #            "name TEXT, phone TEXT,"
     #            "email TEXT)")
-    db.commit()
+    # db.commit()
 
 
 async def sql_command_insert(state):
@@ -34,21 +34,14 @@ async def sql_command_insert(state):
         db.commit()
 
 
-async def sql_command_random(message):
-    result = cursor.execute("SELECT * FROM homepage_member").fetchall()
-    random_user = random.choice(result)
-    await bot.send_photo(message.from_user.id, random_user[1],
-                         caption=f"Name: {random_user[2]}\n"
-                                 f"Description: {random_user[3]}\n"
-                                 f"Price: {random_user[4]}\n")
-
-
 async def sql_command_last():
-    return cursor.execute("SELECT * FROM homepage_member ORDER BY id DESC LIMIT 1").fetchall()
+    return cursor.execute("SELECT * FROM homepage_member ORDER BY id DESC LIMIT 1")
+    return cursor.fetchall()
 
 
 async def sql_command_all():
-    return cursor.execute("SELECT * FROM homepage_member").fetchall()
+    return cursor.execute("SELECT * FROM homepage_member")
+    return cursor.fetchall()
 
 
 async def sql_command_delete(id):
@@ -56,17 +49,11 @@ async def sql_command_delete(id):
     db.commit()
 
 
-async def sql_commands_get_all_id():
-    return cursor.execute("SELECT id FROM homepage_member").fetchall()
-
-
 async def sql_command_last_job():
-    return cursor.execute("SELECT * FROM homepage_job ORDER BY id DESC LIMIT 1").fetchall()
+    cursor.execute("SELECT * FROM homepage_job ORDER BY id DESC LIMIT 1").fetchall()
+    return cursor.fetchall()
 
 
 async def sql_command_all_job():
-    return cursor.execute("SELECT * FROM homepage_job").fetchall()
-
-
-async def sql_commands_get_all_id_job():
-    return cursor.execute("SELECT id FROM homepage_job").fetchall()
+    cursor.execute("SELECT * FROM homepage_job")
+    return cursor.fetchall()

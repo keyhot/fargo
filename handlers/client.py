@@ -7,7 +7,7 @@ from database import bot_db
 
 async def send_notification():
     for id in ADMIN:
-        await bot.send_message(id, )
+        await bot.send_message(id, "Новый зарегестрированный пользователь!")
 
 
 # @dp.message_handler(commands=['start'])
