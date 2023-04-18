@@ -23,7 +23,7 @@ def sql_create():
     #            "(id INTEGER PRIMARY KEY SERIAL,"
     #            "name TEXT, phone TEXT,"
     #            "email TEXT)")
-    cursor.commit()
+    db.commit()
 
 
 async def sql_command_insert(state):
