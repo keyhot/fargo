@@ -20,7 +20,7 @@ def sql_create():
     cursor = db.cursor()
     print('CONNECTED TO POSTGRES!')
     cursor.execute("CREATE TABLE IF NOT EXISTS homepage_member "
-               "(id INTEGER PRIMARY KEY AUTOINCREMENT,"
+               "(id INTEGER PRIMARY KEY SERIAL,"
                "name TEXT, phone TEXT,"
                "email TEXT)")
     cursor.commit()
