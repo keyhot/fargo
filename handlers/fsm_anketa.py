@@ -26,8 +26,8 @@ async def fsm_start(message: types.Message):
 @dp.message_handler(state=FSMAdmin.name)
 async def load_name(message: types.Message, state: FSMContext):
     async with state.proxy() as data:
-        id = await bot_db.sql_command_last()
-        data['id'] = id[0][0] + 1
+        last_member = await bot_db.sql_command_last()
+        data['id'] = last_member[0] + 1
         data['name'] = message.text
     await FSMAdmin.next()
     await message.answer("Номер телефона.")

@@ -36,7 +36,7 @@ async def sql_command_insert(state):
 
 async def sql_command_last():
     return cursor.execute("SELECT * FROM homepage_member ORDER BY id DESC LIMIT 1")
-    return cursor.fetchall()
+    return cursor.fetchone()
 
 
 async def sql_command_all():
