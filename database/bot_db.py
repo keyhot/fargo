@@ -14,15 +14,16 @@ def sql_create():
         host=os.environ.get('PSQL_DB_HOST'),
         database=os.environ.get('PSQL_DB_NAME'),
         user=os.environ.get('PSQL_USER'),
-        password=os.environ.get('PSQL_PASSWORD')
+        password=os.environ.get('PSQL_PASSWORD'),
+        sslmode='require',
     )
     cursor = db.cursor()
     print('CONNECTED TO POSTGRES!')
-    db.execute("CREATE TABLE IF NOT EXISTS homepage_member "
+    cursor.execute("CREATE TABLE IF NOT EXISTS homepage_member "
                "(id INTEGER PRIMARY KEY AUTOINCREMENT,"
                "name TEXT, phone TEXT,"
                "email TEXT)")
-    db.commit()
+    cursor.commit()
 
 
 async def sql_command_insert(state):

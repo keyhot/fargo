@@ -9,13 +9,13 @@
             <div><b>{% translate "Наименование" %}</b>: {{object.name}}</div>
             <div><b>{% translate "Город" %}</b>: {{object.city}}</div>
             <div><b>{% translate "Зарплата" %}</b>: {{object.wage}}</div>
-            <div><b>{% translate "Описание" %}</b>: {{object.details}}</div>
+            <div style="max-width: 550px"><b>{% translate "Описание" %}</b>: {{object.details}}</div>
         {% endif %}
         {% if LANGUAGE_CODE == "en" %}
             <div><b>{% translate "Наименование" %}</b>: {{object.name_en}}</div>
             <div><b>{% translate "Город" %}</b>: {{object.city_en}}</div>
             <div><b>{% translate "Зарплата" %}</b>: {{object.wage_en}}</div>
-            <div><b>{% translate "Описание" %}</b>: {{object.details_en}}</div>
+            <div style="max-width: 550px"><b>{% translate "Описание" %}</b>: {{object.details_en}}</div>
         {% endif %}
     </div>
 {% endblock %}
